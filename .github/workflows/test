@@ -2,7 +2,7 @@ import requests
 import os
 
 webhook = os.environ.get("WEBHOOK_URL")
-message = {"content": "test"}
+message = {"content": "hello test"}
 
 print("Sending test message...")
 requests.post(webhook, json=message)
