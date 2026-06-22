@@ -2,8 +2,16 @@ import requests
 import os
 
 webhook = os.environ.get("WEBHOOK_URL")
-message = {"content": "test"}
+print(f"DEBUG: Webhook is: {webhook}")
 
-print("Sending test message...")
-requests.post(webhook, json=message)
-print("Done!")
+if not webhook:
+    print("ERROR: WEBHOOK IS MISSING FROM SECRETS!")
+else:
+    try:
+        message = {"content": "TEST SUCCESSFUL!"}
+        response = requests.post(webhook, json=message)
+        print(f"Discord status: {response.status_code}")
+        if response.status_code == 204:
+            print("SUCCESS!")
+    except Exception as e:
+        print(f"CRASHED: {e}")
