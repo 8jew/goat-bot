@@ -23,4 +23,4 @@ jobs:
         env:
           WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
           API_KEY: ${{ secrets.API_KEY }}
-        run: python goalbot.py
+        run: python test.py
