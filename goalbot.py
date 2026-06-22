@@ -2,8 +2,8 @@ import requests
 import os
 
 # These grab the secrets from GitHub secretly
-WEBHOOK_URL = os.environ.get("https://discord.com/api/webhooks/1518540885929754734/sIS-wrlfFben-HYKuh6sZAswiycXNuBy0tHjW1vZ4nnW_jiypUYHuM_bUQ3NLIt_UrIL")
-API_KEY = os.environ.get("b01597cd2e26029c7da4ea473ef790b6")
+WEBHOOK_URL = os.environ.get("WEBHOOK_URL")
+API_KEY = os.environ.get("API_KEY")
 
 # 39 = Premier League, 140 = La Liga. Add more if you want.
 LEAGUE_IDS = [39, 140] 
